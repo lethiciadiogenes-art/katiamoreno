@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Katia Moreno Biomédica Esteta</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Katia Moreno, biomédica esteta em Governador Valadares (MG): design de sobrancelhas, Brow Lamination, micropigmentação de sobrancelhas e lábios, remoção a laser e Método Brow Revival.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400;1,6..96,500&family=Jost:wght@300;400;500;600&display=swap">
+<style>
+/* Layout: palco preto, retrato em arco (a curva da sobrancelha é o motivo gráfico),
+   dourado para estrutura e títulos, rosa só para ação e ênfase. */
+:root{
+  color-scheme:dark;
+  --preto:#0c0a0b;
+  --carvao:#161214;
+  --carvao-2:#1f191c;
+  --linha:#3a2f2a;
+  --dourado:#c9a45c;
+  --dourado-claro:#e6cf9a;
+  --rosa:#f0a8bf;
+  --rosa-forte:#e27fa0;
+  --creme:#f3ebe4;
+  --suave:#b9aba6;
+  --display:"Bodoni Moda","Didot","Bodoni MT",Georgia,serif;
+  --texto:"Jost","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --raio:4px;
+  --max:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--preto);color:var(--creme);font-family:var(--texto);font-size:17px;line-height:1.65;font-weight:300}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--preto)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--rosa);outline-offset:3px}
+.wrap{max-width:var(--max);margin-inline:auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.12;margin:0;text-wrap:balance}
+h1{font-size:clamp(2.5rem,6.2vw,4.5rem);letter-spacing:-.01em}
+h2{font-size:clamp(2rem,4.2vw,3rem)}
+h3{font-size:1.5rem}
+em{font-style:italic;color:var(--rosa)}
+p{margin:0}
+.sobre-linha{font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--dourado);font-weight:500}
+.lead{color:var(--suave);max-width:58ch}
+
+/* Botões */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:52px;padding:0 1.7em;border-radius:999px;font:500 .95rem/1 var(--texto);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:1px solid transparent;transition:background .2s,color .2s,border-color .2s,transform .2s;cursor:pointer}
+.btn svg{width:1.25em;height:1.25em;flex:none}
+.btn-rosa{background:var(--rosa);color:var(--preto)}
+.btn-rosa:hover{background:var(--creme);transform:translateY(-2px)}
+.btn-linha{border-color:var(--dourado);color:var(--dourado-claro);background:transparent}
+.btn-linha:hover{background:var(--dourado);color:var(--preto)}
+
+/* Cabeçalho */
+.topo{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:rgba(12,10,11,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--linha)}
+.topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:68px}
+.marca{font-family:var(--display);font-size:1.35rem;text-decoration:none;letter-spacing:.02em;white-space:nowrap}
+.marca small{display:block;font:500 .6rem/1.2 var(--texto);letter-spacing:.3em;text-transform:uppercase;color:var(--dourado)}
+.menu{display:flex;gap:1.8rem;list-style:none;margin:0;padding:0}
+.menu a{text-decoration:none;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:var(--suave);font-weight:400}
+.menu a:hover{color:var(--dourado-claro)}
+.topo .btn{min-height:42px;font-size:.78rem;padding:0 1.2em}
+@media (max-width:860px){.menu{display:none}}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;background:radial-gradient(60% 70% at 78% 40%,rgba(226,127,160,.16),transparent 70%),var(--preto)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4.5rem);align-items:center;padding-block:clamp(2.5rem,6vw,5rem)}
+.hero-texto{display:flex;flex-direction:column;gap:1.5rem;min-width:0}
+.hero-texto .lead{font-size:1.12rem}
+.acoes{display:flex;flex-wrap:wrap;gap:.9rem}
+.provas{display:flex;flex-wrap:wrap;gap:.6rem 2.2rem;list-style:none;margin:.6rem 0 0;padding:1.4rem 0 0;border-top:1px solid var(--linha)}
+.provas li{display:flex;flex-direction:column;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:var(--suave)}
+.provas strong{font:400 1.7rem/1.2 var(--display);color:var(--dourado-claro);letter-spacing:0;text-transform:none}
+.retrato{position:relative;justify-self:center;width:min(100%,420px)}
+.retrato img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 20%;border-radius:999px 999px var(--raio) var(--raio)}
+.retrato::before{content:"";position:absolute;inset:-14px -14px 22px 14px;border:1px solid var(--dourado);border-radius:999px 999px var(--raio) var(--raio);pointer-events:none}
+.selo{position:absolute;left:-10px;bottom:34px;background:var(--preto);border:1px solid var(--dourado);padding:.7rem 1rem;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--dourado-claro);line-height:1.5}
+.selo b{display:block;font:italic 400 1.15rem/1.2 var(--display);letter-spacing:0;text-transform:none;color:var(--rosa)}
+@media (max-width:800px){
+  .hero .wrap{grid-template-columns:1fr}
+  .retrato{order:-1;width:min(78%,320px)}
+  .selo{left:-6px;bottom:20px}
+}
+
+/* Faixa */
+.faixa{border-block:1px solid var(--linha);background:var(--carvao)}
+.faixa ul{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem 2.2rem;list-style:none;margin:0;padding-block:1.1rem;padding-inline:0;font-family:var(--display);font-style:italic;font-size:1.1rem;color:var(--dourado-claro)}
+.faixa li+li::before{content:"✦";font-style:normal;font-size:.6rem;color:var(--rosa);margin-right:2.2rem;vertical-align:middle}
+@media (max-width:640px){.faixa li+li::before{display:none}.faixa ul{gap:.3rem 1.4rem;font-size:1rem}}
+
+/* Seções */
+.secao{padding-block:clamp(3.5rem,8vw,6.5rem)}
+.cabeca{display:flex;flex-direction:column;gap:1rem;margin-bottom:clamp(2rem,4vw,3.2rem)}
+.alt{background:var(--carvao)}
+
+/* Especialidades */
+.grade{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+@media (max-width:920px){.grade{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:580px){.grade{grid-template-columns:1fr}}
+.servico{display:flex;flex-direction:column;background:var(--carvao);border:1px solid var(--linha);border-radius:var(--raio);overflow:hidden;min-width:0}
+.servico img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .5s}
+.servico:hover img{transform:scale(1.04)}
+.servico-corpo{display:flex;flex-direction:column;gap:.7rem;padding:1.4rem 1.4rem 1.5rem;flex:1}
+.servico h3 span{display:block;font:500 .68rem/1.4 var(--texto);letter-spacing:.22em;text-transform:uppercase;color:var(--rosa);margin-bottom:.35rem}
+.servico p{color:var(--suave);font-size:.98rem}
+.servico a{margin-top:auto;padding-top:.6rem;font-size:.82rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--dourado-claro);text-decoration:none}
+.servico a:hover{color:var(--rosa)}
+.servico a::after{content:" →"}
+
+/* Resultados */
+.galeria{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem}
+.galeria figure{margin:0;position:relative;overflow:hidden;border-radius:var(--raio)}
+.galeria img{width:100%;aspect-ratio:1;object-fit:cover}
+.galeria figcaption{position:absolute;inset:auto 0 0;padding:1.6rem .9rem .7rem;background:linear-gradient(transparent,rgba(12,10,11,.88));font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--creme);font-weight:400}
+@media (max-width:760px){.galeria{grid-template-columns:repeat(2,1fr)}}
+.nota{margin-top:1.2rem;font-size:.85rem;color:var(--suave)}
+
+/* Sobre */
+.sobre{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.sobre-fotos{display:grid;grid-template-columns:1.25fr 1fr;gap:.8rem;align-items:end}
+.sobre-fotos img{width:100%;object-fit:cover;border-radius:var(--raio)}
+.sobre-fotos img:first-child{aspect-ratio:3/4}
+.sobre-fotos img:last-child{aspect-ratio:9/14;border:1px solid var(--dourado)}
+.sobre-texto{display:flex;flex-direction:column;gap:1.2rem;min-width:0}
+.sobre-texto p{color:var(--suave)}
+.formacao{list-style:none;margin:.4rem 0 0;padding:0;display:grid;gap:.9rem}
+.formacao li{padding-left:1.4rem;position:relative;color:var(--creme)}
+.formacao li::before{content:"";position:absolute;left:0;top:.72em;width:.7rem;height:1px;background:var(--dourado)}
+.formacao small{display:block;color:var(--suave);font-size:.9rem}
+blockquote{margin:.6rem 0 0;padding:1.2rem 0 0;border-top:1px solid var(--linha);font:italic 400 1.5rem/1.35 var(--display);color:var(--dourado-claro)}
+blockquote cite{display:block;margin-top:.6rem;font:500 .72rem/1 var(--texto);letter-spacing:.22em;text-transform:uppercase;color:var(--rosa)}
+@media (max-width:820px){.sobre{grid-template-columns:1fr}}
+
+/* Passos */
+.passos{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;list-style:none;margin:0;padding:0;counter-reset:p}
+.passos li{counter-increment:p;display:flex;flex-direction:column;gap:.6rem;padding-top:1.2rem;border-top:1px solid var(--dourado)}
+.passos li::before{content:counter(p);font:italic 400 2.4rem/1 var(--display);color:var(--rosa)}
+.passos p{color:var(--suave);font-size:.98rem}
+@media (max-width:820px){.passos{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:480px){.passos{grid-template-columns:1fr}}
+
+/* FAQ */
+.faq{max-width:780px}
+details{border-bottom:1px solid var(--linha)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:1rem;align-items:center;padding:1.2rem 0;font:400 1.3rem/1.3 var(--display)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:300 1.6rem/1 var(--texto);color:var(--rosa);flex:none;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 0 1.3rem;color:var(--suave);max-width:64ch}
+
+/* Contato */
+.contato{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:start}
+.contato-chamada{display:flex;flex-direction:column;gap:1.4rem;min-width:0}
+.dados{display:grid;gap:0;margin:0;border:1px solid var(--linha);border-radius:var(--raio);background:var(--preto)}
+.dados div{padding:1.2rem 1.4rem;border-bottom:1px solid var(--linha)}
+.dados div:last-child{border-bottom:0}
+.dados dt{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--dourado);font-weight:500;margin-bottom:.25rem}
+.dados dd{margin:0;display:flex;flex-wrap:wrap;gap:.4rem 1rem;align-items:center;user-select:text}
+.dados a{color:var(--rosa);text-underline-offset:3px}
+.copiar{background:none;border:1px solid var(--linha);color:var(--suave);font:400 .75rem/1 var(--texto);letter-spacing:.1em;text-transform:uppercase;padding:.5em .9em;border-radius:999px;cursor:pointer}
+.copiar:hover{border-color:var(--dourado);color:var(--dourado-claro)}
+@media (max-width:820px){.contato{grid-template-columns:1fr}}
+
+/* Rodapé e botão flutuante */
+footer{border-top:1px solid var(--linha);padding-block:2rem calc(2rem + 70px);color:var(--suave);font-size:.85rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.8rem}
+.zap{position:fixed;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:8;width:58px;height:58px;border-radius:50%;background:var(--rosa);color:var(--preto);display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.5);transition:transform .2s,background .2s}
+.zap:hover{transform:scale(1.08);background:var(--creme)}
+.zap svg{width:30px;height:30px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body style="margin:0">
+
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-zap" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3Z"/><path fill="currentColor" d="M9 7.6l1.3-.4 1 2.2-.9 1c.6 1.1 1.4 1.9 2.5 2.5l1-.9 2.2 1-.4 1.3c-.3.7-1 1.1-1.8 1-3.2-.6-5.6-3-6.2-6.2-.1-.8.3-1.2 1-1.5Z"/></symbol>
+</svg>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio">Katia Moreno<small>Biomédica Esteta</small></a>
+    <nav aria-label="Principal">
+      <ul class="menu">
+        <li><a href="#especialidades">Especialidades</a></li>
+        <li><a href="#resultados">Resultados</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#duvidas">Dúvidas</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-rosa" target="_blank" rel="noopener" href="https://wa.me/5533991591024?text=Ol%C3%A1%2C%20Katia!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio.">Agendar</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-texto">
+        <p class="sobre-linha">Governador Valadares · MG</p>
+        <h1>Sobrancelhas e lábios com <em>naturalidade</em> e olhar de biomédica.</h1>
+        <p class="lead">Design, Brow Lamination, micropigmentação e remoção a laser em um atendimento individual, pensado para o seu rosto, o seu estilo e a sua autoestima.</p>
+        <div class="acoes">
+          <a class="btn btn-rosa" target="_blank" rel="noopener" href="https://wa.me/5533991591024?text=Ol%C3%A1%2C%20Katia!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio."><svg aria-hidden="true"><use href="#i-zap"/></svg>Agendar pelo WhatsApp</a>
+          <a class="btn btn-linha" href="#especialidades">Ver especialidades</a>
+        </div>
+        <ul class="provas">
+          <li><strong>5,8 mil</strong>seguidoras no Instagram</li>
+          <li><strong>6</strong>especialidades</li>
+          <li><strong>Perfil verificado</strong>@katiamorenobiomedica_esteta</li>
+        </ul>
+      </div>
+      <div class="retrato">
+        <img src="img/retrato.jpg" alt="Katia Moreno de jaleco branco, de braços cruzados" width="750" height="1000">
+        <p class="selo"><b>Katia Moreno</b>Biomédica Esteta</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="faixa">
+    <div class="wrap">
+      <ul>
+        <li>Design de sobrancelhas</li>
+        <li>Brow Lamination</li>
+        <li>Micropigmentação</li>
+        <li>Lábios</li>
+        <li>Remoção a laser</li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="secao" id="especialidades">
+    <div class="wrap">
+      <div class="cabeca">
+        <p class="sobre-linha">Especialidades</p>
+        <h2>Cada sobrancelha é única. <em>O cuidado também.</em></h2>
+        <p class="lead">Não existe molde ou padrão. Cada procedimento começa por uma avaliação do seu rosto, dos seus fios e do resultado que você quer ver no espelho.</p>
+      </div>
+      <div class="grade">
+        <article class="servico">
+          <img src="img/henna1.jpg" alt="Sobrancelha desenhada com henna, alinhada e definida" loading="lazy" width="800" height="800">
+          <div class="servico-corpo">
+            <h3><span>Sobrancelhas</span>Design com henna</h3>
+            <p>Alinhamento na régua, tonalidade certa e aplicação precisa. Inclui henna degradê, que também valoriza quem é loira.</p>
+            <a target="_blank" rel="noopener" href="https://wa.me/5533991591024?text=Ol%C3%A1%2C%20Katia!%20Gostaria%20de%20saber%20mais%20sobre%20o%20design%20de%20sobrancelhas.">Quero agendar</a>
+          </div>
+        </article>
+        <article class="servico">
+          <img src="img/lamination-ad.jpg" alt="Sobrancelha com fios alinhados para cima após Brow Lamination" loading="lazy" width="800" height="800">
+          <div class="servico-corpo">
+            <h3><span>Sobrancelhas</span>Brow Lamination</h3>
+            <p>Realinha fios rebeldes, disfarça falhas e redemoinhos e cria efeito lifting. Sobrancelhas mais cheias e volumosas, sem maquiagem.</p>
+            <a target="_blank" rel="noopener" href="https://wa.me/5533991591024?text=Ol%C3%A1%2C%20Katia!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Brow%20Lamination.">Quero agendar</a>
+          </div>
+        </article>
+        <article class="servico">
+          <img src="img/shadow.jpg" alt="Sobrancelhas com micropigmentação Brazilian Shadow de efeito suave" loading="lazy" width="800" height="800">
+          <div class="servico-corpo">
+            <h3><span>Micropigmentação</span>Sobrancelhas Brazilian Shadow</h3>
+            <p>Sombreado suave, com a naturalidade de uma sobrancelha levemente maquiada, respeitando o seu formato e a sua cor.</p>
+            <a target="_blank" rel="noopener" href="https://wa.me/5533991591024?text=Ol%C3%A1%2C%20Katia!%20Gostaria%20de%20saber%20mais%20sobre%20a%20micropigmenta%C3%A7%C3%A3o%20de%20sobrancelhas.">Quero agendar</a>
+          </div>
+        </article>
+        <article class="servico">
+          <img src="img/labios1.jpg" alt="Lábios com cor uniforme após revitalização labial" loading="lazy" width="800" height="800">
+          <div class="servico-corpo">
+            <h3><span>Micropigmentação</span>Lábios</h3>
+            <p>Revitalização para devolver cor e aspecto saudável, e neutralização para clarear lábios amarronzados ou arroxeados.</p>
+            <a target="_blank" rel="noopener" href="https://wa.me/5533991591024?text=Ol%C3%A1%2C%20Katia!%20Gostaria%20de%20saber%20mais%20sobre%20a%20micropigmenta%C3%A7%C3%A3o%20de%20l%C3%A1bios.">Quero agendar</a>
+          </div>
+        </article>
+        <article class="servico">
+          <img src="img/laser.jpg" alt="Sobrancelha logo após uma sessão de remoção a laser" loading="lazy" width="800" height="800">
+          <div class="servico-corpo">
+            <h3><span>Laser</span>Remoção e despigmentação</h3>
+            <p>Protocolo completo para remover micropigmentação antiga, preservando a pele e os fios. Depois, você pode refazer com o design certo.</p>
+            <a target="_blank" rel="noopener" href="https://wa.me/5533991591024?text=Ol%C3%A1%2C%20Katia!%20Gostaria%20de%20saber%20mais%20sobre%20a%20remo%C3%A7%C3%A3o%20a%20laser.">Quero agendar</a>
+          </div>
+        </article>
+        <article class="servico">
+          <img src="img/revival.jpg" alt="Sobrancelha natural e cheia após o Método Brow Revival" loading="lazy" width="800" height="800">
+          <div class="servico-corpo">
+            <h3><span>Método exclusivo</span>Brow Revival™</h3>
+            <p>Reconstrução de fios naturais com microagulhamento e ativos bioestimuladores, para recuperar a densidade e fortalecer as sobrancelhas.</p>
+            <a target="_blank" rel="noopener" href="https://wa.me/5533991591024?text=Ol%C3%A1%2C%20Katia!%20Gostaria%20de%20saber%20mais%20sobre%20o%20M%C3%A9todo%20Brow%20Revival.">Quero agendar</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao alt" id="resultados">
+    <div class="wrap">
+      <div class="cabeca">
+        <p class="sobre-linha">Resultados</p>
+        <h2>Trabalhos reais, <em>sem molde.</em></h2>
+      </div>
+      <div class="galeria">
+        <figure><img src="img/henna2.jpg" alt="Cliente loira com design de sobrancelhas com henna e lábios pigmentados" loading="lazy" width="800" height="799"><figcaption>Design com henna</figcaption></figure>
+        <figure><img src="img/labios2.jpg" alt="Lábios com cor rosada natural após micropigmentação" loading="lazy" width="800" height="800"><figcaption>Lábios</figcaption></figure>
+        <figure><img src="img/design.jpg" alt="Sobrancelha alinhada em cliente madura" loading="lazy" width="800" height="800"><figcaption>Design personalizado</figcaption></figure>
+        <figure><img src="img/cliente.jpg" alt="Cliente sorrindo ao ver o resultado das sobrancelhas no celular" loading="lazy" width="800" height="813"><figcaption>Brow Lamination</figcaption></figure>
+      </div>
+      <p class="nota">Fotos do atendimento de Katia Moreno. Cada resultado depende da avaliação individual. Veja mais no <a href="https://www.instagram.com/katiamorenobiomedica_esteta/" target="_blank" rel="noopener">Instagram</a>.</p>
+    </div>
+  </section>
+
+  <section class="secao" id="sobre">
+    <div class="wrap sobre">
+      <div class="sobre-fotos">
+        <img src="img/certificado.jpg" alt="Katia Moreno de jaleco, sentada, segurando um certificado" loading="lazy" width="800" height="800">
+        <img src="img/estudio-cert.jpg" alt="Katia Moreno no ateliê mostrando seu diploma" loading="lazy" width="563" height="1000">
+      </div>
+      <div class="sobre-texto">
+        <p class="sobre-linha">Sobre</p>
+        <h2>Katia Moreno, <em>biomédica esteta.</em></h2>
+        <p>Expert em design de sobrancelhas e em remoção a laser, micropigmentadora de sobrancelhas e lábios e biomédica. Katia une a técnica do ateliê ao conhecimento da biomedicina para entregar o que a estética de hoje mais pede: naturalidade.</p>
+        <p>Ela busca o melhor fora de casa para oferecer em Governador Valadares:</p>
+        <ul class="formacao">
+          <li>Remoção a laser<small>The Laser Experience, Fátima Goulart Clinic, São Paulo</small></li>
+          <li>Micropigmentação Brazilian Shadow<small>Formação com Ester Garcia, Rio de Janeiro</small></li>
+          <li>Anatomia aplicada à harmonização facial<small>Estudo em Fresh Frozen, Rio de Janeiro</small></li>
+        </ul>
+        <blockquote>“A minha melhor obra de arte é ver o sorriso no rosto de cada cliente.”<cite>Katia Moreno</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao alt" id="como-funciona">
+    <div class="wrap">
+      <div class="cabeca">
+        <p class="sobre-linha">Como funciona</p>
+        <h2>Do primeiro “oi” ao <em>resultado.</em></h2>
+      </div>
+      <ol class="passos">
+        <li><h3>Contato</h3><p>Você chama no WhatsApp, conta o que deseja e escolhe o melhor horário.</p></li>
+        <li><h3>Avaliação</h3><p>Katia analisa o seu rosto, os seus fios e a sua pele, e indica a técnica ideal.</p></li>
+        <li><h3>Procedimento</h3><p>Atendimento individual, com hora marcada, feito com calma e precisão.</p></li>
+        <li><h3>Cuidados</h3><p>Você sai com as orientações de pós-procedimento para o resultado durar mais.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="secao" id="duvidas">
+    <div class="wrap">
+      <div class="cabeca">
+        <p class="sobre-linha">Dúvidas frequentes</p>
+        <h2>Antes de agendar</h2>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>A Brow Lamination é para mim?</summary>
+          <p>É indicada para quem tem fios rebeldes, que crescem em direções diferentes, falhas ou redemoinho no final da sobrancelha, e para quem quer efeito de sobrancelhas mais cheias sem maquiagem.</p>
+        </details>
+        <details>
+          <summary>Tenho uma micropigmentação antiga de que não gosto. Tem solução?</summary>
+          <p>Sim. A despigmentação a laser remove o pigmento antigo com um protocolo que cuida da pele e dos fios. O número de sessões é definido na avaliação.</p>
+        </details>
+        <details>
+          <summary>Posso fazer um novo procedimento depois da remoção a laser?</summary>
+          <p>Pode. Depois da remoção, um novo procedimento é planejado respeitando o seu estilo, o design e a cor que combinam com você.</p>
+        </details>
+        <details>
+          <summary>Tenho poucos fios. O Método Brow Revival ajuda?</summary>
+          <p>O método associa microagulhamento e ativos bioestimuladores para recuperar a densidade e fortalecer os fios naturais. A indicação é confirmada na avaliação.</p>
+        </details>
+        <details>
+          <summary>Como faço para agendar e saber valores?</summary>
+          <p>O agendamento e os valores são passados direto pelo WhatsApp (33) 99159-1024. O atendimento é com hora marcada.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao alt" id="contato">
+    <div class="wrap contato">
+      <div class="contato-chamada">
+        <p class="sobre-linha">Contato</p>
+        <h2>Pronta para realçar <em>a sua beleza?</em></h2>
+        <p class="lead">Chame no WhatsApp, tire suas dúvidas e garanta o seu horário com a Katia.</p>
+        <div class="acoes">
+          <a class="btn btn-rosa" target="_blank" rel="noopener" href="https://wa.me/5533991591024?text=Ol%C3%A1%2C%20Katia!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio."><svg aria-hidden="true"><use href="#i-zap"/></svg>Agendar pelo WhatsApp</a>
+          <a class="btn btn-linha" target="_blank" rel="noopener" href="https://www.instagram.com/katiamorenobiomedica_esteta/">Instagram</a>
+        </div>
+      </div>
+      <dl class="dados">
+        <div><dt>WhatsApp</dt><dd><span id="tel">(33) 99159-1024</span><button class="copiar" type="button" id="copiar-tel" data-copiar="tel">Copiar</button></dd></div>
+        <div><dt>Endereço</dt><dd><span id="end">Rua João Dias Duarte, 352, Lourdes, Governador Valadares, MG, 35032-600</span></dd><dd style="margin-top:.5rem"><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Jo%C3%A3o+Dias+Duarte%2C+352%2C+Lourdes%2C+Governador+Valadares%2C+MG">Abrir no Google Maps</a><button class="copiar" type="button" id="copiar-end" data-copiar="end">Copiar</button></dd></div>
+        <div><dt>Atendimento</dt><dd>Com hora marcada</dd></div>
+        <div><dt>Instagram</dt><dd><a target="_blank" rel="noopener" href="https://www.instagram.com/katiamorenobiomedica_esteta/">@katiamorenobiomedica_esteta</a></dd></div>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="ano">2026</span> Katia Moreno · Biomédica Esteta</span>
+    <span>Governador Valadares, MG</span>
+  </div>
+</footer>
+
+<a class="zap" target="_blank" rel="noopener" aria-label="Falar com a Katia no WhatsApp" href="https://wa.me/5533991591024?text=Ol%C3%A1%2C%20Katia!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio."><svg aria-hidden="true"><use href="#i-zap"/></svg></a>
+
+<script>
+document.getElementById('ano').textContent = new Date().getFullYear();
+document.querySelectorAll('[data-copiar]').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var el = document.getElementById(b.dataset.copiar);
+    var ok = function () { b.textContent = 'Copiado'; setTimeout(function () { b.textContent = 'Copiar'; }, 1800); };
+    var sel = function () { var r = document.createRange(); r.selectNodeContents(el); var s = getSelection(); s.removeAllRanges(); s.addRange(r); };
+    try { navigator.clipboard.writeText(el.textContent).then(ok, sel); } catch (e) { sel(); }
+  });
+});
+document.querySelectorAll('.faq details').forEach(function (d) {
+  d.addEventListener('toggle', function () {
+    if (d.open) document.querySelectorAll('.faq details').forEach(function (o) { if (o !== d) o.open = false; });
+  });
+});
+</script>
+
+</body>
+</html>
